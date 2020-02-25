@@ -19,13 +19,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button musicy= (Button)findViewById(R.id.btnplaymusic);
+
         musicy.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,PlayMusic.class);
                 startActivity(intent);
             }
+
         });
+
 
     }
 
@@ -51,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             case R.id.prod:
                 startActivity( new Intent(this,ProductActivity.class));
+                return true;
+            case R.id.list:
+                startActivity( new Intent(this,Activity2.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
