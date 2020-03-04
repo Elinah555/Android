@@ -30,7 +30,7 @@ WorkOne adapter;
         elements.add("Mpigi");
         elements.add("Kampala");
 
-        //set up the RecyclerView
+        //setting  up the RecyclerView
 recyclerView.setLayoutManager(new LinearLayoutManager(this));
 adapter=new WorkOne(this,elements);
 adapter.setClickListener(this);

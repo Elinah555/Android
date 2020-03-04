@@ -57,8 +57,8 @@ public class WorkOne extends RecyclerView.Adapter<WorkOne.ViewHolder> {
         }
     }
 
-String getItem(int id) {
-        return  work.get(id);}
+//String getItem(int id) {
+       // return  work.get(id);}
 
     public void setClickListener(ItemClickListener itemClickListener2) {
         this.itemClickListener=itemClickListener2;
