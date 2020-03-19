@@ -3,6 +3,7 @@ package com.example.android;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -49,11 +50,28 @@ public class DisplayMessageActivity extends AppCompatActivity {
                 startActivity( new Intent(this,LocationActivity.class));
                 return true;
             case R.id.prod:
-                startActivity( new Intent(this,ProductActivity.class));
+                //declaring an implicit intent to call a person
+                Intent intentthree = new Intent(Intent.ACTION_DIAL);
+                intentthree.setData(Uri.parse("tel:0757361800"));
+                // startActivity( new Intent(this,ProductActivity.class));
+                startActivity(intentthree);
                 return true;
+
             case R.id.list:
                 startActivity( new Intent(this,Activity2.class));
                 return true;
+            case R.id.email:
+                //an intent for sending an email to three people
+                Intent e = new Intent(Intent.ACTION_SEND);
+                e.setData(Uri.parse("mailto:"));
+                String to[] = {"elinahnabasitu@gmail.com", "preskakuru@gmail.com", "birungitricia1@gmail.com"};
+                e.putExtra(Intent.EXTRA_EMAIL, to);
+                e.putExtra(Intent.EXTRA_SUBJECT, "Receive the document below");
+                e.putExtra(Intent.EXTRA_TEXT, "Thanks for receiving the document");
+                e.setType("message/rfc822");
+                startActivity(e);
+                return true;
+
             case R.id.music:
                 startActivity( new Intent(this,PlayMusic.class));
                 return true;

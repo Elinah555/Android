@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class PlayMusic extends AppCompatActivity {
 
-    MediaPlayer player;
+    MediaPlayer music;
     Button  btnnstart;
 
     Button btnnstop;
@@ -21,8 +21,8 @@ public class PlayMusic extends AppCompatActivity {
        btnnstart.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               player=MediaPlayer.create(getApplicationContext(),R.raw.song);
-               player.start();
+               music=MediaPlayer.create(getApplicationContext(),R.raw.song);
+               music.start();
 
            }
        });
@@ -30,8 +30,8 @@ public class PlayMusic extends AppCompatActivity {
        btnnstop.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               if (player !=null && player.isPlaying()){
-                   player.stop();
+               if (music !=null && music.isPlaying()){
+                   music.stop();
                }
            }
        });
