@@ -6,6 +6,7 @@
     <item android:id="@+id/music" android:title="PlaymusicService"></item>
     <item android:id="@+id/email" android:title="sendemail"></item>
     <item android:id="@+id/extstr" android:title="ExternalSaveMessage"></item>
+    <item android:id="@+id/Internally" android:title="InternalSaveMessage"></item>
 
 
 

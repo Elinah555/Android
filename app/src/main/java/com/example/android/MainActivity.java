@@ -123,6 +123,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity( new Intent(this,externalsaveactivity.class));
                 return true;
 
+            case R.id.Internally:
+                startActivity( new Intent(this,InternalFileSave.class));
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }
