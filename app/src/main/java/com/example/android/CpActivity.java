@@ -37,7 +37,7 @@ public class CpActivity extends AppCompatActivity {
                 catch (IOException ex){
                     ex.printStackTrace();
                 }
-                textone.setText((CharSequence)text);
+                textone.setText(text);
             }
         });
 

@@ -3,8 +3,8 @@
     package="com.example.android">
 
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
-
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -13,10 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".externalsaveactivity"></activity>
+
         <receiver
             android:name=".MyReceiverBroad"
             android:enabled="true"
-            android:exported="true"></receiver>
+            android:exported="true" />
 
         <activity android:name=".Activity2" />
         <activity android:name=".Splash">
@@ -31,8 +33,9 @@
         <activity android:name=".CpActivity" />
         <activity android:name=".PlayMusic" />
         <activity android:name=".DisplayMessageActivity" />
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity" />
+
+        <service android:name=".ServiceMusic" />
     </application>
 
 </manifest>

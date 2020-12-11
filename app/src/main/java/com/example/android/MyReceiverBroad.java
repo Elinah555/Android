@@ -10,6 +10,7 @@ import android.widget.Toast;
 public class MyReceiverBroad extends BroadcastReceiver {
     // TODO: This method is called when the BroadcastReceiver is receiving
     // an Intent broadcast.
+    // In your broad cast receiver class you created, implement the vibrator class.
     @Override
     public void onReceive(Context context, Intent intent) {
         Toast toast=Toast.makeText(context,"Time for android man",Toast.LENGTH_LONG);

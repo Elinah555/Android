@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/locat" android:title="Location/Recycler"></item>
-    <item android:id="@+id/prod" android:title="Product"></item>
+    <item android:id="@+id/prod" android:title="makeCall"></item>
     <item android:id="@+id/list" android:title="ListView"></item>
-    <item android:id="@+id/music" android:title="Playmusic"></item>
+    <item android:id="@+id/music" android:title="PlaymusicService"></item>
+    <item android:id="@+id/email" android:title="sendemail"></item>
+    <item android:id="@+id/extstr" android:title="ExternalSaveMessage"></item>
+
 
 
 </menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".externalsaveactivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/edit_txt"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:hint="enter text to be saved externally here"
+        android:textSize="22dp"
+        android:textAlignment="center"
+        />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:text="SAVE TEXT"
+        android:textColor="@color/colorAccent"
+        android:textSize="28dp"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>

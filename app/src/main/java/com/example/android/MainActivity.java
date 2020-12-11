@@ -20,16 +20,17 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+// Hope you remember how did everything. hahaha
 public class MainActivity extends AppCompatActivity {
 
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             int display = intent.getIntExtra("level", 0);
-            ProgressBar bar = (ProgressBar) findViewById(R.id.progressBar2);
+            ProgressBar bar = findViewById(R.id.progressBar2);
             bar.setProgress(display);
-            TextView textView = (TextView) findViewById(R.id.texthello);
-            textView.setText("current battery level" + Integer.toString(display) + "%");
+            TextView textView = findViewById(R.id.texthello);
+            textView.setText("current battery level" + display + "%");
 
         }
     };
@@ -41,8 +42,12 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(broadcastReceiver,new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
 
     }
+
+    // implementing the alarm but at first create a button in a mainActivity xml and call the onclick maethod within the button tag
+    //and give it any name, mine is called "alarmsetting" , this is where the implementation is done.
+    // Also create an edit text in the main activity xml
     public void alarmsetting(View view){
-        EditText editText = (EditText) findViewById(R.id.alarmtext);
+        EditText editText = findViewById(R.id.alarmtext);
         //changing the entered  text to a string then to an integer
         int z =Integer.parseInt(editText.getText().toString());
 
@@ -66,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
-        EditText message = (EditText) findViewById(R.id.messageone);
+        EditText message = findViewById(R.id.messageone);
         Toast.makeText(this, "Sending message " + message.getText().toString(), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, DisplayMessageActivity.class);
         intent.putExtra("MESSAGE", message.getText().toString());
@@ -85,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.locat:
                 startActivity( new Intent(this,LocationActivity.class));
                 return true;
+
             case R.id.prod:
                 //declaring an implicit intent to call a person
                 Intent intentthree = new Intent(Intent.ACTION_DIAL);
@@ -96,11 +102,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.list:
                 startActivity( new Intent(this,Activity2.class));
                 return true;
+
             case R.id.email:
                 //an intent for sending an email to three people
                 Intent e = new Intent(Intent.ACTION_SEND);
                 e.setData(Uri.parse("mailto:"));
-                String to[] = {"elinahnabasitu@gmail.com", "preskakuru@gmail.com", "birungitricia1@gmail.com"};
+                String[] to = {"elinahnabasitu@gmail.com", "preskakuru@gmail.com", "birungitricia1@gmail.com"};
                 e.putExtra(Intent.EXTRA_EMAIL, to);
                 e.putExtra(Intent.EXTRA_SUBJECT, "Receive the document below");
                 e.putExtra(Intent.EXTRA_TEXT, "Thanks for receiving the document");
@@ -111,6 +118,11 @@ public class MainActivity extends AppCompatActivity {
             case R.id.music:
                 startActivity( new Intent(this,PlayMusic.class));
                 return true;
+
+            case R.id.extstr:
+                startActivity( new Intent(this,externalsaveactivity.class));
+                return true;
+
             default:
                 return super.onOptionsItemSelected(item);
         }

@@ -18,7 +18,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_message);
-        Button n =(Button)findViewById(R.id.buttonc);
+        Button n = findViewById(R.id.buttonc);
         n.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +29,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         Intent intent=getIntent();
         String message= intent.getStringExtra("MESSAGE");
-        TextView messageView=(TextView)findViewById(R.id.messageTextView);
+        TextView messageView= findViewById(R.id.messageTextView);
         messageView.setText(message);
     }
 
@@ -64,7 +64,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
                 //an intent for sending an email to three people
                 Intent e = new Intent(Intent.ACTION_SEND);
                 e.setData(Uri.parse("mailto:"));
-                String to[] = {"elinahnabasitu@gmail.com", "preskakuru@gmail.com", "birungitricia1@gmail.com"};
+                String[] to = {"elinahnabasitu@gmail.com", "preskakuru@gmail.com", "birungitricia1@gmail.com"};
                 e.putExtra(Intent.EXTRA_EMAIL, to);
                 e.putExtra(Intent.EXTRA_SUBJECT, "Receive the document below");
                 e.putExtra(Intent.EXTRA_TEXT, "Thanks for receiving the document");
