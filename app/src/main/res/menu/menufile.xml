@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/storage" android:title="ProductDatabase"></item>
     <item android:id="@+id/locat" android:title="Location/Recycler"></item>
     <item android:id="@+id/prod" android:title="makeCall"></item>
     <item android:id="@+id/list" android:title="ListView"></item>
@@ -7,7 +8,7 @@
     <item android:id="@+id/email" android:title="sendemail"></item>
     <item android:id="@+id/extstr" android:title="ExternalSaveMessage"></item>
     <item android:id="@+id/Internally" android:title="InternalSaveMessage"></item>
-
+    <item android:id="@+id/GMap" android:title="GoogleMaps"></item>
 
 
 </menu>

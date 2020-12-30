@@ -75,6 +75,10 @@ public class DisplayMessageActivity extends AppCompatActivity {
             case R.id.music:
                 startActivity( new Intent(this,PlayMusic.class));
                 return true;
+
+            case R.id.GMap:
+                startActivity( new Intent(this,MapsActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

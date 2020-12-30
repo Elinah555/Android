@@ -18,9 +18,9 @@ public class MyReceiverBroad extends BroadcastReceiver {
         toast.setGravity(Gravity.CENTER,0,0);
         toast.show();
         //calling the vibrator
-        Vibrator vibratoralarm;
-        vibratoralarm = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        vibratoralarm.vibrate(3000);
+        Vibrator vibratorAlarm;
+        vibratorAlarm = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
+        vibratorAlarm.vibrate(3000);
 
 
     }

@@ -20,7 +20,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-// Hope you remember how did everything. hahaha
+
 public class MainActivity extends AppCompatActivity {
 
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
@@ -43,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // implementing the alarm but at first create a button in a mainActivity xml and call the onclick maethod within the button tag
-    //and give it any name, mine is called "alarmsetting" , this is where the implementation is done.
-    // Also create an edit text in the main activity xml
+    /*implementing the alarm but at first create a button in a mainActivity xml and call the onclick maethod within the button tag
+    and give it any name, mine is called "alarmsetting" , this is where the implementation is done.
+    Also create an edit text in the main activity xml.*/
     public void alarmsetting(View view){
         EditText editText = findViewById(R.id.alarmtext);
         //changing the entered  text to a string then to an integer
@@ -125,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.Internally:
                 startActivity( new Intent(this,InternalFileSave.class));
+                return true;
+            case R.id.storage:
+                startActivity( new Intent(this,ProductRegistration.class));
                 return true;
 
             default:
